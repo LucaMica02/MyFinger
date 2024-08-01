@@ -1,9 +1,9 @@
 # MyFinger
-My implementation of the linux finger command for a homework for the operating systems course at Sapienza University of Rome
+My implementation of the linux finger command for a homework for the operating systems course at Sapienza University of Rome.
 * Inspired by https://linux.die.net/man/1/finger
 
 # Program Description
-Displays information about the system users
+Displays information about the system users.
 
 # Options
 [-s] displays the user's login name, real name, terminal name and write status (as a ''*'' after the terminal name if write permission is denied), idle time, login time, office location and office phone number.
