@@ -1,5 +1,6 @@
 # MyFinger
 My implementation of the linux finger command for a homework for the operating systems course at Sapienza University of Rome
+* Inspired by https://linux.die.net/man/1/finger
 
 # Program Description
 Displays information about the system users
@@ -22,5 +23,3 @@ If no arguments are specified, finger will print an entry for each user currentl
 
 # How To Run
 ./myFinger [-lsmp] [user..]
-
-* Inspired by https://linux.die.net/man/1/finger
