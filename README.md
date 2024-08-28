@@ -1,25 +1,59 @@
-# MyFinger
-My implementation of the linux finger command for a homework for the operating systems course at Sapienza University of Rome.
-* Inspired by https://linux.die.net/man/1/finger
+# MyFinger 📖
 
-# Program Description
-Displays information about the system users.
+**MyFinger** is a custom implementation of the Linux `finger` command, developed as a homework assignment for the Operating Systems course at Sapienza University of Rome. This tool provides detailed information about system users, inspired by the original [Linux `finger` command] (https://linux.die.net/man/1/finger).
 
-# Options
-[-s] displays the user's login name, real name, terminal name and write status (as a ''*'' after the terminal name if write permission is denied), idle time, login time, office location and office phone number.
-Unknown devices as well as non existent idle and login times are displayed as single asterisks.
+## Program Description 🏗️
 
-[-l] Produces a multi-line format displaying all of the information described for the -s option as well as the user's home directory, home phone number, login shell, mail status, and the contents of the files ".plan", ".project", ".pgpkey" and ".forward" from the user's home directory.
-If write permission is denied to the device, the phrase ''(messages off)'' is appended to the line containing the device name. One entry per user is displayed with the -l option; if a user is logged on multiple times, terminal information is repeated once per login.
+The **MyFinger** command-line tool displays information about system users. Depending on the options provided, it can show basic or detailed information, similar to the functionality of the standard `finger` command in Linux.
 
-[-p] Prevents the -l option of finger from displaying the contents of the ".plan", ".project", ".pgpkey" and ".forward" files.
+## Options 🌟
 
-[-m] Prevent matching of user names. User is usually a login name; however, matching will also be done on the users' real names, unless the -m option is supplied. All name matching performed by finger is case insensitive.
+- **`-s`**: Displays the user's login name, real name, terminal name, and write status. If write permission is denied, an asterisk (`*`) is displayed after the terminal name. Also shows idle time, login time, office location, and office phone number. Unknown devices or missing idle and login times are displayed as asterisks (`*`).
 
-# Default Options
-If no options are specified, finger defaults to the -l style output if operands are provided, otherwise to the -s style. Note that some fields may be missing, in either format, if information is not available for them.
+- **`-l`**: Produces a multi-line format displaying all the information from the `-s` option, plus the user's home directory, home phone number, login shell, mail status, and the contents of the files `.plan`, `.project`, `.pgpkey`, and `.forward` from the user's home directory. If write permission is denied, `(messages off)` is appended to the terminal name. Each user is displayed once, but terminal information is repeated for multiple logins.
 
-If no arguments are specified, finger will print an entry for each user currently logged into the system.
+- **`-p`**: Prevents the `-l` option from displaying the contents of the `.plan`, `.project`, `.pgpkey`, and `.forward` files.
 
-# How To Run
-./myFinger [-lsmp] [user..]
+- **`-m`**: Disables matching of real names and only matches against login names. By default, `MyFinger` matches user input with both login names and real names, case insensitively. The `-m` option restricts this to login names only.
+
+## Default Options ⚙️
+
+If no options are specified:
+- **With operands (usernames)**: Defaults to the `-l` style output.
+- **Without operands**: Defaults to the `-s` style output, listing all users currently logged into the system.
+
+Note: Some fields may be missing in either format if the information is not available.
+
+## How to Run 🎮
+
+To run **MyFinger**, use the following command:
+
+```bash
+./myFinger [-lsmp] [user...]
+```
+- **[-lsmp]:** These represent the options described above. You can combine them as needed.
+- **[user...]:** Specify one or more usernames to query. If no usernames are provided, the command will display information for all currently logged-in users.
+
+### Examples
+Display brief information for all logged-in users:
+```bash
+./myFinger -s
+```
+
+Display detailed information for a specific user:
+```bash
+./myFinger -l username
+```
+
+Display detailed information without reading .plan, .project, .pgpkey, and .forward:
+```bash
+./myFinger -lp username
+```
+
+Search only by login names:
+```bash
+./myFinger -m username
+```
+
+## Conclusion 🔚
+MyFinger is a powerful and flexible tool designed to replicate and extend the functionality of the standard Linux finger command. Whether you need a quick overview of system users or detailed information, MyFinger provides the options to suit your needs.
