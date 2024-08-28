@@ -1,6 +1,8 @@
 # MyFinger 📖
+![C Version](https://img.shields.io/badge/C-11%2B-blue)
+![Platform](https://img.shields.io/badge/Platform-Linux-blue)
 
-**MyFinger** is a custom implementation of the Linux `finger` command, developed as a homework assignment for the Operating Systems course at Sapienza University of Rome. This tool provides detailed information about system users, inspired by the original [Linux `finger` command] (https://linux.die.net/man/1/finger).
+**MyFinger** is a custom implementation of the Linux `finger` command, developed as a homework assignment for the Operating Systems course at Sapienza University of Rome. This tool provides detailed information about system users, inspired by the original [Linux `finger` command](https://linux.die.net/man/1/finger).
 
 ## Program Description 🏗️
 
